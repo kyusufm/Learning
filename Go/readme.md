@@ -1,0 +1,1 @@
+Go lang training folder
