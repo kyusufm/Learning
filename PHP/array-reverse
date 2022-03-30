@@ -1,0 +1,12 @@
+function reverseArray($a) {
+    // Write your code here
+    $j = 0;
+    $b = round(count($a)/2)-1;
+    for ($i = count($a)-1; $i > $b; $i--){
+      $temp = $a[$i];
+      $a[$i] = $a[$j];
+      $a[$j] = $temp;
+      $j++;
+    }
+    return $a;
+}
