@@ -84,3 +84,6 @@ func displayGroup(group Group) {
 		fmt.Println(user.FirstName)
 	}
 }
+
+//Method (function yang dimiliki oleh sebuah object)
+//misal object user2, user1, user
