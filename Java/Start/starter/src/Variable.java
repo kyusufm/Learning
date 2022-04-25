@@ -21,6 +21,8 @@ public class Variable {
         System.out.println(v.angka);
     }
 
+    
+
     //constanta, nilai variabel yang tidak bisa diubah ubah.
     //variabel biasa disebut juga mutabel karena nilainya bisa diubah ubah
 }
