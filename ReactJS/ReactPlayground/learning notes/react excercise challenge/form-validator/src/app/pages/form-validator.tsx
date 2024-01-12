@@ -6,7 +6,7 @@ export default function FormValidator() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <h1 className="h1">welcome to form validator</h1>
 
-        <form onSubmit={}>
+        <form >
           <input type="text" className="className" />
           <input type="email" className="email" />
           <input type="password" className="password" />
