@@ -8,7 +8,7 @@ export default function FormValidator() {
 
         <form onSubmit={}>
           <input type="text" className="className" />
-          <input type="text" className="email" />
+          <input type="email" className="email" />
           <input type="password" className="password" />
         </form>
       </div>
