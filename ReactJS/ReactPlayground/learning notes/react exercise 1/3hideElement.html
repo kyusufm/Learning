@@ -17,10 +17,17 @@
 <script type="text/babel">
   // Define a simple React component
   function App() {
+
+    const [display, setDisplay] = React.useState(true);
+    const toggleDisplay = () => {
+        setDisplay(!display)
+    }
     
     return (
       <div>
-        <h1>User List</h1>
+        <h1>Hide element</h1>
+        <button onClick = {toggleDisplay}> Hide element below </button>
+        { display && <p> this element will hide and show </p> }
       </div>
     );
   }
