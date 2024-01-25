@@ -7,12 +7,14 @@
   <!-- Include React and ReactDOM from a CDN -->
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
 </head>
 <body>
 
 <div id="root"></div>
 
-<script>
+<script type="text/babel">
   // Define a simple React component
   function HelloWorld() {
     const theString = "Display this string"
