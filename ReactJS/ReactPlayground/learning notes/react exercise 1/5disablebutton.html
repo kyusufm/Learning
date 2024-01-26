@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World React App</title>
+  <!-- Include React and ReactDOM from a CDN -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  // Define a simple React component
+  function App() {
+    const [text, setText] = React.useState("");
+    const [stat, setStat] = React.useState(true);
+    
+    const validateText = (e) => {
+        const textInput = e.target.value
+        setText(textInput);
+
+        // Check if the entered text is less than 5 characters
+        setStat(textInput.length < 5);
+    };
+    
+    return (
+        <>
+        <h3>Disable Button Challenge</h3>
+        <input type="text" onChange={validateText} value={text}/>
+        <button disabled = {stat}>Submit</button>
+        </>
+    );
+}
+
+  // Render the component into the 'root' element
+  ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+
+</body>
+</html>
