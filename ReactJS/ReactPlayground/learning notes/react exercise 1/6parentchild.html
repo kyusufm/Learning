@@ -16,11 +16,37 @@
 
 <script type="text/babel">
   // Define a simple React component
-  function App() {
-    
+  function Child({ onButtonClick }) {
     return (
       <div>
-        <h1>User List</h1>
+        <div>Child</div>
+        <button onClick={onButtonClick}>Change Parent Value</button>
+      </div>
+    );
+  }
+
+  function App() {
+    const [value, setValue] = React.useState(
+      "I need to be updated from my child"
+    );
+
+    // Callback function to update the parent state
+    const updateParentValue = () => {
+      setValue("Updated value from child");
+    };
+
+    return (
+      <div>
+        <h3>Update Parent State Challenge (Using Callback)</h3>
+        <div className="wrapper">
+          <div>Parent</div>
+          <div className="box-wrapper">{value}</div>
+        </div>
+
+        <div className="wrapper">
+          {/* Pass the callback function to the child as a prop */}
+          <Child onButtonClick={updateParentValue} />
+        </div>
       </div>
     );
   }
