@@ -22,8 +22,8 @@
     return (
         <div>
         <h2>Counter: {counter}</h2>
-        <button onClick = {()=>SetCounter(counter+1)}>Increment</button>
-        <button onClick = {()=>SetCounter(counter-1)}>Decrement</button>
+        <button onClick = {()=>SetCounter(counter=>counter+1)}>Increment</button>
+        <button onClick = {()=>SetCounter(counter=>counter-1)}>Decrement</button>
         </div>
     );
     };
